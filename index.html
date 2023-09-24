@@ -6,19 +6,35 @@
 <link href="css/card_sudoku.css" rel="stylesheet" type="text/css">
 <link href="css/card_game.css" rel="stylesheet" type="text/css">
 <link href="css/card_other.css" rel="stylesheet" type="text/css">
+	
+<link href="css/gamerule.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/gamerule.js"></script>
+
 </head>
 
 <body>
-	<div class ="card">
-	<h2>数独</h2>
-	</div>
+<!-- 背景卡片 -->	
+<div class ="card">
+<h2>数独</h2>
+</div>
 	
-	<div class ="card1">
-	<h2>游戏</h2>
-	</div>
+<div class ="card1">
+<h2>游戏</h2>
+</div>
 	
-	<div class ="card2">
-	<h2>难度、规则</h2>
-	</div>
+<div class ="card2">
+<h2>难度、规则</h2>
+</div>	
+
+<!-- 游戏规则按钮 -->
+<button onclick="openPopup()">游戏规则</button>
+<div id="popup" class="popup">
+  <div class="popup-content">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <p>规则待填写</p>
+  </div>
+</div>
+
+
 </body>
 </html>
