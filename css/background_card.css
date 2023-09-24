@@ -1,0 +1,25 @@
+*{
+	margin:0;
+	padding:0;
+	top:255px;
+}
+body{
+	display:flex;
+	justify-content:center;
+	align-items: center;
+	height:100vh;
+	background-color:rgba(r,g,b,a);
+	perspective: 1000px;
+}
+.card1
+{
+	position:relative;
+	right:1050px;
+	z-index:999;
+	width:255px;
+	height:333px;
+	border-radius:30px;
+	cursor:pointer;
+	background-color:rgba(215,200,200,0.25);
+	border: 1px solid #ccc;
+}
