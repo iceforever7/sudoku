@@ -1,0 +1,18 @@
+
+.grid-show {
+    border: #999 1px solid;
+    /* border-top: #999 1px solid; */
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    LINE-height: 40px;
+}
+
+.grid-input {
+    border: #443 1px solid;
+    font-size: 16px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+}
+

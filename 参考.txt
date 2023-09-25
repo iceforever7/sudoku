@@ -1,1 +1,4 @@
 https://github.com/BriFuture/blog-code-example/blob/master/18-06to09/numberplace/NumberPlaceCore.js
+
+
+17 30 41
