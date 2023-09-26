@@ -63,7 +63,6 @@ function genBoard() {
         tBoard.remove();
     }
     tBoard = document.createElement("table");
-    tBoard.setAttribute("align", "center");
     tBoard.setAttribute("id", "board");
     tBoard.setAttribute("class", "board");
     tBoard.setAttribute("boarder", "1");
