@@ -11,6 +11,6 @@
 	height: 150px;
 	top:10px;
 	left:960px;
-	z-index: -1;
+	z-index: 0;
 	/*位置大小*/
 }

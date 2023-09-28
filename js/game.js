@@ -93,7 +93,55 @@ function genBoard() {
     }
 
     gamediv.appendChild(tBoard);
+
 }
+
+var tBoards=new Array();
+
+function genBoard1(i) {;
+    let ccc="container"
+    tu.stop();
+    let tBoard;
+    tBoard = document.getElementById("board");
+    tBoard = document.createElement("table");
+    tBoard.setAttribute("id", "board");
+    tBoard.setAttribute("class", "board");
+    tBoard.setAttribute("boarder", "1");
+    g = new Game( gameDifficuty );
+    let tr, td, grid, value;
+    let ginput;
+    for(let i = 0; i < 9; i++) {
+        tr = document.createElement("tr");
+        for(let j = 0; j < 9; j++) {
+            td = document.createElement("td");
+            value = g.getValueAt(new Number(i), new Number(j));
+            td.setAttribute("class", "grid-show");
+            if( value ) {
+                td.innerHTML = value;
+            }
+            else {
+                ginput = document.createElement("input");
+                inputs.push(ginput);
+                ginput.setAttribute("id", `grid-${i}-${j}`);
+                ginput.setAttribute("class", "grid-input");
+                ginput.setAttribute("type", "text");
+                ginput.setAttribute("onkeyup", "placeGrid(this)");
+                td.appendChild(ginput);
+            }
+            tr.appendChild(td);
+        }
+        tBoard.appendChild(tr);
+    }
+    let co=ccc.concat(i);
+    if(tBoards[i])
+    {
+        tBoards[i].remove();
+    }
+    tBoards[i]=tBoard;
+    eval(co).appendChild(tBoards[i]);
+
+}
+
 
 function placeGrid(t) {
     let value = new Number(t.value);
@@ -136,6 +184,24 @@ function checkInputs() {
 function changeDifficuty(value) {
     gameDifficuty = value;
 }
+function playgame()
+{
+    //测试document.write(-1);
+    async function plygame(){
+    //测试document.write(0);
+    genBoard();
+    //测试document.write(1);
+}
+//测试document.write(2);
+plygame().then(() => {
+    //测试document.write(3);
+    for(let i=2;i<=9;i++)
+    {
+        //测试document.write(4);
+        genBoard1(i);
+    }
+}
+);
+}
 
-
-genBoard();
+playgame();

@@ -8,3 +8,6 @@ function showContent(container) {
       // Show selected container
       document.getElementById(container).style.display = "block";
     }
+
+    //尝试使用多线程，但不知为何无法创建new worker
+    //self.postMessage("Game");

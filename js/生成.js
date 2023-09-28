@@ -595,4 +595,5 @@ Game.DifficutyEasy = 1;
 Game.DifficutyNormal = 2;
 Game.DifficutyHard = 3;
 
-// export {Game, Board, Grid}
+//尝试使用多线程，但不知为何无法创建new worker
+    //self.postMessage("Game");

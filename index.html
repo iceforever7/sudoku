@@ -11,41 +11,64 @@
 <link href="css/gamestart.css" rel="stylesheet" type="text/css">	
 <link href="css/timestart.css" rel="stylesheet" type="text/css">
 <link href="css/choice.css" rel="stylesheet" type="text/css">
+<link href="css/background.css" rel="stylesheet" type="text/css">
 <script type="text/javascript" src="js/gamerule.js"></script>
 <script type="text/javascript" src="js/choice.js"></script>
 
 </head>
 
 <body>
-<div class="card"></div>
-<div class="card1"></div>
+<div class="card">
+<div class="square">
+  <ul class="square-inner flex">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>	
+</div>
+<div class="card1">
+</div>
 <div class="card2"></div>
+<video class="background" autoplay muted loop src="img/back.gif"></video>
 <!--背景-->
       <div>
         <p id="result-label" class="result-normal"></p>
       </div>
       <div id="time" class="card2" align="center">
-        <p id="time-label">00:00:00</p>
+        <p id="time-label" class="type">00:00:00</p>
       </div>
 <!--计时-->
       <div id="difficuty" class="card2">
+		  <div class="type2">
+		<p>难度选择</p>
+		<hr>
         <input type="radio" name="difficuty" value="1" onmouseup="changeDifficuty(this.value)" checked="checked" />Easy
         <input type="radio" name="difficuty" value="2" onmouseup="changeDifficuty(this.value)" /> Normal
         <input type="radio" name="difficuty" value="3" onmouseup="changeDifficuty(this.value)" /> Hard
-      </div>
+          </div>
+	  </div>
 <!--难度-->
-<button onclick="genBoard()" class="game_start">开始游戏</button>
-	
+<button onclick="playgame()" class="game_start">开始游戏</button>
 <button onclick="tu.startTimer()" class="time_start">计时开始</button>
-	
 <button onclick="openPopup()" class="game_rule">游戏规则</button>
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
-    <p>规则待填写</p>
+    <p>数独规则：将1~9填入9x9的盘面中，使每行、每列、每个粗线宫（3x3）内均不重复。</p>
+	<p>点击难度选择下的选项选择数独的难度</p>
+	<p>点击开始游戏以生成数独</p>
+	<p>需要记录时间时，点击计时开始以记录时间</p>
+	<p>点击题目选择下的选项以选择想要做的数独</p>
   </div>
 </div>
-<!--按钮-->	
+<!--按钮-->
   <form class="choice">
 	<h>题目选择</h>
 	<hr>
@@ -70,6 +93,5 @@
 <div id="container9" class="content" style="display:none"></div>
 <script src="js/生成.js"></script>
 <script src="js/game.js"></script>
-
 </body>
 </html>
