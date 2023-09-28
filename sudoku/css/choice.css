@@ -1,0 +1,15 @@
+.content{
+	position:absolute;
+	top:75px;
+	left:90px;
+}
+/*数独位置*/
+.choice
+{
+	position: absolute;
+	top:225px;
+	left:975px;
+	font-size:35px;
+	border: 2px solid #000000
+}
+/*选项位置*/
