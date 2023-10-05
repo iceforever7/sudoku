@@ -49,7 +49,7 @@ class TimeUtil {
     }
 }
 
-let gamediv = document.getElementById("gamediv");
+let container1 = document.getElementById("container1");
 let g;
 let gameDifficuty = Game.DifficutyEasy;
 let tu = new TimeUtil;
@@ -92,7 +92,7 @@ function genBoard() {
         tBoard.appendChild(tr);
     }
 
-    gamediv.appendChild(tBoard);
+    container1.appendChild(tBoard);
 
 }
 

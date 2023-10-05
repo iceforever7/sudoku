@@ -72,7 +72,7 @@
   <form class="choice">
 	<h>题目选择</h>
 	<hr>
-    <input type="radio" name="containers" value="gamediv" onchange="showContent('gamediv')">数独1<br>
+    <input type="radio" name="containers" value="container1" onchange="showContent('container1')">数独1<br>
     <input type="radio" name="containers" value="container2" onchange="showContent('container2')">数独2<br>
     <input type="radio" name="containers" value="container3" onchange="showContent('container3')">数独3<br>
 	<input type="radio" name="containers" value="container4" onchange="showContent('container4')">数独4<br>
@@ -82,7 +82,7 @@
 	<input type="radio" name="containers" value="container8" onchange="showContent('container8')">数独8<br>
 	<input type="radio" name="containers" value="container9" onchange="showContent('container9')">数独9<br>
   </form>
-<div id="gamediv" class="content" style="display:none"></div>
+<div id="container1" class="content" style="display:none"></div>
 <div id="container2" class="content" style="display:none"></div>
 <div id="container3" class="content" style="display:none"></div>
 <div id="container4" class="content" style="display:none"></div>
@@ -91,7 +91,10 @@
 <div id="container7" class="content" style="display:none"></div>
 <div id="container8" class="content" style="display:none"></div>
 <div id="container9" class="content" style="display:none"></div>
+
+
 <script src="js/生成.js"></script>
 <script src="js/game.js"></script>
+<script src="js/solve.js"></script>
 </body>
 </html>
