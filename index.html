@@ -53,21 +53,24 @@
         <input type="radio" name="difficuty" value="1" onmouseup="changeDifficuty(this.value)" checked="checked" />Easy
         <input type="radio" name="difficuty" value="2" onmouseup="changeDifficuty(this.value)" /> Normal
         <input type="radio" name="difficuty" value="3" onmouseup="changeDifficuty(this.value)" /> Hard
+		<input type="radio" name="difficuty" value="999" onmouseup="changeDifficuty(this.value)" />自定义	  
           </div>
 	  </div>
 <!--难度-->
-<button onclick="playgame()" class="game_start">开始游戏</button>
+<button onclick="playgame()" class="game_start">生成</button>
 <button onclick="tu.startTimer()" class="time_start">计时开始</button>
 <button onclick="openPopup()" class="game_rule">游戏规则</button>
-<button onclick="changestyle()" class="solve">答案</button>
+<button onclick="answer();changestyle();" class="solve">答案</button>
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
     <p>数独规则：将1~9填入9x9的盘面中，使每行、每列、每个粗线宫（3x3）内均不重复。</p>
 	<p>点击难度选择下的选项选择数独的难度</p>
-	<p>点击开始游戏以生成数独</p>
+	<p>点击生成以生成数独</p>
+	<p>点击题目选择下数独以选择想要做的数独</p>
+	<p>点击答案以显示当前数独的解</p>
+	<p>选择难度中的自定义以填入自定义的数独(求解尚未完成)</p>
 	<p>需要记录时间时，点击计时开始以记录时间</p>
-	<p>点击题目选择下的选项以选择想要做的数独</p>
   </div>
 </div>
 <!--按钮-->
@@ -105,9 +108,9 @@
 <div id="solve_container8" class="solve_content" style="display:none"></div>
 <div id="solve_container9" class="solve_content" style="display:none"></div>
 
-
 <script src="js/生成.js"></script>
 <script src="js/game.js"></script>
 <script src="js/solve.js"></script>
+<script src="js/self.js"></script>
 </body>
 </html>

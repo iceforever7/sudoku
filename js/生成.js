@@ -547,11 +547,7 @@ class Game {
     constructor( difficuty ) {
         this.board = new Board();
         this.board.init();
-        if( difficuty <= 0 || difficuty > 3 ) {
-            difficuty = 2;
-        }
         this.digTimes = difficuty*2;
-
         this.digBoard();
     }
 

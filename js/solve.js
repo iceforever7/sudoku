@@ -62,8 +62,10 @@ var solveSudoku = function (board) {
     return board
 }
 //历遍容器
-const containers = document.querySelectorAll('.content');
-for (let i = 0; i < containers.length; i++) {
+function answer()
+{
+  const containers = document.querySelectorAll('.content');
+  for (let i = 0; i < containers.length; i++) {
   const container = containers[i];
   const table = document.getElementById(container.id);
 		const rows = table.querySelectorAll('tr');
@@ -87,3 +89,5 @@ for (let i = 0; i < containers.length; i++) {
 		solveSudoku(data);
 		console.log(data);
 }
+}
+
