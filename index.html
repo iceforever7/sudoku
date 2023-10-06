@@ -8,7 +8,8 @@
 <link href="css/card_sudoku.css" rel="stylesheet" type="text/css">
 <link href="css/card_other.css" rel="stylesheet" type="text/css">
 <link href="css/gamerule.css" rel="stylesheet" type="text/css">
-<link href="css/gamestart.css" rel="stylesheet" type="text/css">	
+<link href="css/gamestart.css" rel="stylesheet" type="text/css">
+<link href="css/solve.css" rel="stylesheet" type="text/css">
 <link href="css/timestart.css" rel="stylesheet" type="text/css">
 <link href="css/choice.css" rel="stylesheet" type="text/css">
 <link href="css/background.css" rel="stylesheet" type="text/css">
@@ -58,6 +59,7 @@
 <button onclick="playgame()" class="game_start">开始游戏</button>
 <button onclick="tu.startTimer()" class="time_start">计时开始</button>
 <button onclick="openPopup()" class="game_rule">游戏规则</button>
+<button onclick="changestyle()" class="solve">答案</button>
 <div id="popup" class="popup">
   <div class="popup-content">
     <span class="close" onclick="closePopup()">&times;</span>
@@ -69,19 +71,20 @@
   </div>
 </div>
 <!--按钮-->
-  <form class="choice">
-	<h>题目选择</h>
-	<hr>
-    <input type="radio" name="containers" value="container1" onchange="showContent('container1')">数独1<br>
-    <input type="radio" name="containers" value="container2" onchange="showContent('container2')">数独2<br>
-    <input type="radio" name="containers" value="container3" onchange="showContent('container3')">数独3<br>
-	<input type="radio" name="containers" value="container4" onchange="showContent('container4')">数独4<br>
-	<input type="radio" name="containers" value="container5" onchange="showContent('container5')">数独5<br>
-	<input type="radio" name="containers" value="container6" onchange="showContent('container6')">数独6<br>
-	<input type="radio" name="containers" value="container7" onchange="showContent('container7')">数独7<br>
-	<input type="radio" name="containers" value="container8" onchange="showContent('container8')">数独8<br>
-	<input type="radio" name="containers" value="container9" onchange="showContent('container9')">数独9<br>
-  </form>
+<div class = "choice">
+<h>题目选择</h>
+<hr>
+<botton class="choices" name="containers" value="container1" onclick="showContent('container1'); showsolve_content('solve_container1');">数独1</botton>
+<botton class="choices" name="containers" value="container2" onclick="showContent('container2'); showsolve_content('solve_container2');">数独2</botton>
+<botton class="choices" name="containers" value="container3" onclick="showContent('container3'); showsolve_content('solve_container3');">数独3</botton>
+<botton class="choices" name="containers" value="container4" onclick="showContent('container4'); showsolve_content('solve_container4');">数独4</botton>
+<botton class="choices" name="containers" value="container5" onclick="showContent('container5'); showsolve_content('solve_container5');">数独5</botton>
+<botton class="choices" name="containers" value="container6" onclick="showContent('container6'); showsolve_content('solve_container6');">数独6</botton>
+<botton class="choices" name="containers" value="container7" onclick="showContent('container7'); showsolve_content('solve_container7');">数独7</botton>
+<botton class="choices" name="containers" value="container8" onclick="showContent('container8'); showsolve_content('solve_container8');">数独8</botton>
+<botton class="choices" name="containers" value="container9" onclick="showContent('container9'); showsolve_content('solve_container9');">数独9</botton>
+</div>
+
 <div id="container1" class="content" style="display:none"></div>
 <div id="container2" class="content" style="display:none"></div>
 <div id="container3" class="content" style="display:none"></div>
@@ -91,6 +94,16 @@
 <div id="container7" class="content" style="display:none"></div>
 <div id="container8" class="content" style="display:none"></div>
 <div id="container9" class="content" style="display:none"></div>
+	
+<div id="solve_container1" class="solve_content" style="display:none"></div>
+<div id="solve_container2" class="solve_content" style="display:none"></div>
+<div id="solve_container3" class="solve_content" style="display:none"></div>
+<div id="solve_container4" class="solve_content" style="display:none"></div>
+<div id="solve_container5" class="solve_content" style="display:none"></div>
+<div id="solve_container6" class="solve_content" style="display:none"></div>
+<div id="solve_container7" class="solve_content" style="display:none"></div>
+<div id="solve_container8" class="solve_content" style="display:none"></div>
+<div id="solve_container9" class="solve_content" style="display:none"></div>
 
 
 <script src="js/生成.js"></script>

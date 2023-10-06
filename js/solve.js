@@ -86,6 +86,4 @@ for (let i = 0; i < containers.length; i++) {
 		// 输出表格数据数组data
 		solveSudoku(data);
 		console.log(data);
-	
 }
-	

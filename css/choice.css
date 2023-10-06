@@ -6,10 +6,41 @@
 /*数独位置*/
 .choice
 {
-	position: absolute;
-	top:225px;
-	left:975px;
-	font-size:35px;
-	border: 2px solid #000000
+    position: absolute;
+    top:225px;
+    left:975px;
+    display: block;
+    width:170px;
+    height: 40px;
+    border: none;
+    background-color:rgba(rgba);
+    color: #000000;
+    font-size:1.5em;
+    border-radius: 6px;
+}
+
+.choices
+{
+    position: relative;
+	top:5px;
+    display: block;
+    width:90px;
+    height:30px;
+    border: none;
+    background-color: #fda085;
+    color: #fff;
+    font-size:0.9em;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    /* 动画过渡 */
+    transition: 0.3s;
 }
 /*选项位置*/
+
+.choices:hover{
+    /* 沿X轴旋转15度 */
+    transform: rotateX(15deg);
+    /* 阴影 */
+    box-shadow: 0 15px 15px rgba(225, 95, 65, 0.56);
+}
