@@ -1,0 +1,31 @@
+.solve{
+position: absolute;
+left: 1725px;
+top:315px;
+    display: block;
+    width:170px;
+    height: 40px;
+    border: none;
+    background-color: #fda085;
+    color: #fff;
+    font-size:1.5em;
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    /* 动画过渡 */
+    transition: 0.3s;
+}
+.solve:hover{
+    /* 沿X轴旋转15度 */
+    transform: rotateX(15deg);
+    /* 阴影 */
+    box-shadow: 0 15px 15px rgba(225, 95, 65, 0.56);
+}
+/* 按钮样式*/
+ 
+.solve_content
+{
+	position: absolute;
+	top:325px;
+	left:1075px;
+}
